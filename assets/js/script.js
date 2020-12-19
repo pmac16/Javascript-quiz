@@ -1,4 +1,30 @@
-function quiz(questions) {
+//display start page
+
+//on click, clear the old div and put in the question div
+    // function clearBox(directions) {
+    //document.getElementById(directions).innerHTML = "";
+
+var timerEl = document.getElementById('#countdown');
+
+//time that counts down from 70
+function countdown() {
+    var timeLeft = 70;
+
+
+    var timeInterval = setInterval(function() {
+        if (timeLeft >=1) {
+            timeInterval.textContent =timeLeft;
+            timeLeft--;
+        }
+        else if (timeLeft === 0) {
+            timerEl.textContent="0";
+            clearInterval(timeInterval);
+        }
+    }, 1000);
+}
+
+// Quiz Div Section
+function Quiz(questions) {
     this.score = 0;
     this.questions = questions;
     this.questionIndex = 0;
@@ -33,6 +59,7 @@ Question.prototype.isCorrectAnswer = function(choice) {
  
  
 function populate() {
+    //change this to say that if hte quiz is ended, put in high score
     if(quiz.isEnded()) {
         showScores();
     }
@@ -61,21 +88,20 @@ function guess(id, guess) {
     }
 };
  
- 
-function showProgress() {
-    var currentQuestionNumber = quiz.questionIndex + 1;
-    var element = document.getElementById("progress");
-    element.innerHTML = "Question " + currentQuestionNumber + " of " + quiz.questions.length;
-};
- 
-function showScores() {
-    var gameOverHTML = "<h1>Result</h1>";
-    gameOverHTML += "<h2 id='score'> Your scores: " + quiz.score + "</h2>";
-    var element = document.getElementById("quiz");
-    element.innerHTML = gameOverHTML;
-};
- 
+//change this to show if they got it correct or not 
+function questionCorrect() {
+    //  if answer is correct,
+    element.innerHTML = "Correct"
+    //if answer is incorrect, display incorrect and take away time
+}
+// function showProgress() {
+//     var currentQuestionNumber = quiz.questionIndex + 1;
+//     var element = document.getElementById("progress");
+//     element.innerHTML = "Question " + currentQuestionNumber + " of " + quiz.questions.length;
+// };
 
+ 
+//quiz questions
 var questions = [
     new Question("Commonly used data types DO NOT include: ", ["A. Strings", "B. Booleans", "C. Alerts", "D.Numbers"], "B. Booleans"),
     new Question("The condition in an if/else statement is enclosed within ___.", ["A. Quotes", "B. Curly Brackets", "C. Parentheses", "D. Square Brackets"], "C. Parentheses"),
@@ -91,18 +117,6 @@ var quiz = new Quiz(questions);
 //display quiz
 populate();
 
-//on click, clear the old div and put in the question div
-
-// function clearBox(directions) {
-//     document.getElementById(directions).innerHTML = "";
-
-
-    
-
- 
-
-
-//display quiz right away
 
 
 //on submit, show results
@@ -110,11 +124,7 @@ populate();
 
 //function to star ttimer
 
-//function to build the quiz
+//enter high scores
 
-//function to checkAnswer
-
-//function of clicking on the button
-
-//function to show results
+//high scores page 
 
