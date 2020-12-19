@@ -26,6 +26,8 @@ header {
 }
 
 .button {
-   /* figre this out */
+   color:crimson;
+   border-color: black;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
