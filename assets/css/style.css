@@ -1,14 +1,52 @@
 body {
-    background-color: #136F63;
+    background-color: lightcoral;
 }
 
-header {
+a {
+    color: black;
+}
+
+a:hover {
+    color: lightblue;
+}
+
+#countdown {
+    padding: 0;
+}
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
+    font-size: 20px;
+    border: 2px black solid;
+    background-color: lightgray;
 
-    /* this is not working  */
 }
 
+.start-page {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.directions {
+    text-align: center;
+    width: 50%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: auto;
+}
+
+.startButton {
+    align-items: center;
+    margin: auto;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    background-color: #3e2f5b;
+    border-radius: 5px;
+    border: 2px, black, solid;
+    color: white;
+    
+}
 .grid {
     width: 600px;
     height: 500px;
@@ -37,6 +75,16 @@ header {
 .buttons {
     margin-top: 30px;
 
+}
+
+.button {
+    background: #3e2f5b;
+    width: 250px;
+    font-size: 20px;
+    color: white;
+    border: 1px solid #000f08;
+    margin: 10px 40px 10px 0px;
+    padding: 10px 10px;
 }
 
 #btn0, #btn1, #btn2, #btn3 {
