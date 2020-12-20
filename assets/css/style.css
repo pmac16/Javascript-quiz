@@ -1,16 +1,16 @@
 body {
-    background-color: lightcoral;
+    background-color: #f4fffd;
 }
 
 .container {
     align-items: center;
 }
 a {
-    color: black;
+    color: #011936;
 }
 
 a:hover {
-    color: lightblue;
+    color: #465362;
 }
 
 #countdown {
@@ -23,7 +23,7 @@ a:hover {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
     border: 2px black solid;
-    background-color: lightgray;
+    background-color: #f9dc5c;
 
 }
 
