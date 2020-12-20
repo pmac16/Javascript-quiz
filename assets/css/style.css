@@ -2,6 +2,9 @@ body {
     background-color: lightcoral;
 }
 
+.container {
+    align-items: center;
+}
 a {
     color: black;
 }
@@ -37,8 +40,9 @@ a:hover {
 }
 
 .startButton {
-    align-items: center;
-    margin: auto;
+    left: 50%;
+    margin: 0;
+    position: absolute;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
     background-color: #3e2f5b;

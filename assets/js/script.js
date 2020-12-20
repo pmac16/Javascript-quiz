@@ -1,20 +1,33 @@
 // //display start page
-var startPage = document.createElement("div");
-    startPage.className = "start-page";
-    startPage.innerHTML="<h1>JavaScript Challenge</h1>";
-    document.body.appendChild(startPage);
+var masterContainer = document.createElement("div");
+masterContainer.className = "container";
 
-    var directions = document.createElement("div");
+var startPage = document.createElement("div");
+startPage.className = "start-page";
+startPage.innerHTML="<h1>JavaScript Challenge</h1>";
+masterContainer.appendChild(startPage);
+
+ var directions = document.createElement("div");
     directions.className = "directions";
     directions.innerHTML="<h2>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</h2>";
-    document.body.appendChild(directions);
+    masterContainer.appendChild(directions);
 
-    var startButton = document.createElement("button");
-    startButton.innerHTML='<button class="startButton" id="start-quiz" type="submit" onclick="startQuiz()">Start</button>';
-    document.body.appendChild(startButton);
+var startButton = document.createElement("button");
+startButton.className = "container startButton";
+startButton.innerHTML = "Start"
+startButton.onclick = function() {startQuiz()}; 
+masterContainer.appendChild(startButton);
+
+document.body.appendChild(masterContainer);
+
+   
+
+    
 
 function startQuiz() {
     console.log("This worked.");
+    
+
     
 }
     
